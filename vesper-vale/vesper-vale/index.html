@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090909">
+    <meta name="description" content="Vesper Vale — streetwear premium dark romantic. Hoodies et sweatshirts unisexes, détails Scorpion brodés. Sweatshirt 59 € · hoodie 69 € · édition spéciale 79 €." />
+    <meta property="og:title" content="Vesper Vale — Dark Romantic Streetwear" />
+    <meta property="og:description" content="Minimalism on the outside. Mystery within. Sweatshirt 59 € · hoodie 69 € · édition spéciale 79 €." />
+    <meta property="og:type" content="website" />
+    <title>Vesper Vale — Dark Romantic Streetwear</title>
+    <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="overrides.css">
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="announcement"><span>Minimalism on the outside. Mystery within.</span><span class="announcement-offer">Sweatshirt 59 € <i></i> Hoodie 69 € <i></i> Édition 79 €</span></div>
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="Vesper Vale, accueil"><img src="assets/mark.svg" alt=""><span>VESPER VALE</span></a>
+      <nav class="main-nav" aria-label="Navigation principale"><a href="#collection">La collection</a><a href="#manifesto">La maison</a><a href="#service">Infos</a></nav>
+      <button class="cart-trigger" type="button" aria-label="Ouvrir le panier">Panier <span id="cart-count">0</span></button>
+    </header>
+
+    <main id="home">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy"><p class="eyebrow"><span class="tiny-star">✳</span> DROP 01 · THE SCORPION HOUSE</p><h1 id="hero-title">Mystery<br><em>within.</em></h1><p class="hero-deck">Streetwear de romantisme sombre.<br>Un signe de maison. Un seul zodiaque : le Scorpion.</p><div class="hero-actions"><a class="button button-light" href="#collection">Découvrir le drop <span>↗</span></a><p class="hero-price"><b>Sweatshirt 59 €</b><span>·</span><b>Hoodie 69 €</b><span>·</span><b>Édition 79 €</b></p></div></div>
+        <div class="hero-art" aria-label="Architecture gothique, image d'ambiance"><img class="hero-stock-image" src="assets/stock/gothic-interior.jpg" alt="Voûtes gothiques de la cathédrale d'Albi, image d'inspiration" fetchpriority="high"><span class="hero-coordinate">HOUSE 01<br>THE SCORPION</span><span class="hero-caption">Minimalism on the outside.<br>Mystery within.</span></div>
+        <div class="hero-index">01 <span>/</span> 06</div>
+      </section>
+
+      <section class="offer-strip" aria-label="Tarifs de la collection"><span class="offer-symbol">✳</span><p>Hoodies & sweatshirts premium</p><strong>59 € · 69 € · édition 79 €</strong><a href="#collection" aria-label="Voir la collection">↗</a></section>
+
+      <section id="collection" class="collection section-wrap">
+        <div class="section-heading"><div><p class="eyebrow">LA MAISON DU SCORPION · DROP 01</p><h2>Six signes de maison.</h2></div><p class="section-note">Trois pièces au lancement. Trois concepts en réserve.<br>Hoodies & sweatshirts oversize unisexes</p></div>
+        <div class="filter-row" role="group" aria-label="Filtrer les pièces"><button class="filter-button is-active" data-filter="all">Les six concepts <span>6</span></button><button class="filter-button" data-filter="launch">Lancement <span>3</span></button><button class="filter-button" data-filter="upcoming">À venir <span>3</span></button><p class="filter-price">Sweatshirt 59 € <span>·</span> hoodie 69 € <span>·</span> édition 79 €</p></div>
+        <div id="product-grid" class="product-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="manifesto" class="manifesto"><div class="manifesto-mark"><img src="assets/mark.svg" alt="" /></div><div class="manifesto-copy"><p class="eyebrow">VESPER VALE · MAISON SANS VISAGE</p><h2>Minimalism<br>on the outside.<br><em>Mystery within.</em></h2><p>Vesper Vale parle par ses vêtements, pas par un fondateur. Le Scorpion est notre seule référence astrologique; la rose, le sceau et le monogramme donnent à la maison une vie au-delà des signes du zodiaque.</p><a class="text-link" href="pages/a-propos.html">Entrer dans la maison <span>↗</span></a></div><div class="manifesto-side">HOUSE 01<br>THE SCORPION<br><span>NO FACE · ONE SIGN</span></div></section>
+
+      <section class="journal section-wrap"><div class="section-heading"><div><p class="eyebrow">NOTES DE LA MAISON</p><h2>Les signes intérieurs.</h2></div><a class="text-link" href="pages/social.html">Suivre le journal <span>↗</span></a></div><div class="journal-grid"><article class="journal-card journal-card-one"><span>01 — SCORPIO</span><h3>Le signe<br>fondateur.</h3><p>Un seul zodiaque. Réduit à son essence.</p></article><article class="journal-card journal-card-two"><span>02 — NOCTURNE</span><h3>Une rose<br>sans couleur.</h3><p>La gravure florale, traduite en broderie.</p></article><article class="journal-card journal-card-three"><span>03 — OBSIDIAN</span><h3>Le sceau<br>de maison.</h3><p>Trois pièces. Trois prix : 59 €, 69 €, 79 €.</p></article></div></section>
+
+      <section class="newsletter"><div><p class="eyebrow">LES LETTRES DU SOIR</p><h2>Une note, pas du bruit.</h2></div><form id="newsletter-form"><label class="visually-hidden" for="newsletter-email">Votre adresse e-mail</label><input id="newsletter-email" type="email" placeholder="Votre adresse e-mail" required><button type="submit" aria-label="S'inscrire à la newsletter">↗</button><p id="newsletter-message">Inscription disponible après configuration d'un outil d'e-mailing.</p></form></section>
+    </main>
+
+    <footer id="service" class="site-footer"><div class="footer-brand"><a class="wordmark" href="#home"><img src="assets/mark.svg" alt=""><span>VESPER VALE</span></a><p>Vêtements de caractère,<br>signes discrets.</p><span class="footer-legal">Une maison indépendante en devenir.</span></div><div><h2>La maison</h2><a href="pages/a-propos.html">À propos</a><a href="pages/contact.html">Contact</a><a href="pages/faq.html">FAQ</a></div><div><h2>Le service</h2><a href="pages/tailles.html">Guide des tailles</a><a href="pages/livraison-retours.html">Livraison & retours</a><a href="#collection">La collection</a></div><div><h2>Les informations</h2><a href="pages/mentions-legales.html">Mentions légales</a><a href="pages/confidentialite.html">Confidentialité</a><a href="pages/cgv.html">Conditions de vente</a></div><div class="footer-bottom"><span>© 2026 Vesper Vale · Projet de marque en pré-lancement</span><span>À l'heure bleue <i>✳</i></span></div></footer>
+
+    <div id="cart-backdrop" class="cart-backdrop" hidden></div><aside id="cart-drawer" class="cart-drawer" aria-label="Votre panier" aria-hidden="true"><div class="drawer-head"><div><p class="eyebrow">SÉLECTION</p><h2>Votre panier <span id="drawer-count">(0)</span></h2></div><button id="close-cart" class="icon-button" type="button" aria-label="Fermer le panier">×</button></div><div id="cart-lines" class="cart-lines"></div><div class="drawer-foot"><div class="cart-promo"><span>✳</span><p>2 pulls pour 50 €<small>La remise s'applique automatiquement.</small></p></div><div class="cart-totals"><span>Sous-total produits</span><strong id="cart-subtotal">0 €</strong></div><p class="shipping-note">Livraison calculée à l'étape de commande. Checkout indisponible avant configuration du paiement.</p><button id="checkout-button" class="button button-dark" type="button" disabled>Commande bientôt disponible</button><a class="continue-link" href="#collection">Continuer mes découvertes</a></div></aside>
+    <div id="product-modal" class="product-modal" hidden><button class="modal-backdrop" data-close-modal aria-label="Fermer la fiche produit"></button><section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="icon-button modal-close" type="button" data-close-modal aria-label="Fermer">×</button><div id="modal-content"></div></section></div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

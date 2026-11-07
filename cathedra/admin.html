@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Atelier | Révolte Noire</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="gestion.css"><script type="module" src="admin.js"></script></head>
+<body class="workspace">
+<header class="workspace-header"><a class="brand" href="index.html">Révolte Noire</a><span>Atelier de gestion</span><a href="index.html">Voir la boutique ↗</a></header>
+<main class="workspace-main">
+  <div class="workspace-title"><div><p class="eyebrow">ESPACE PRIVÉ</p><h1>Atelier</h1></div><button id="logout" class="button ghost" hidden>Déconnexion</button></div>
+  <p id="status" class="workspace-status" role="status">Connexion à Firebase…</p>
+  <details class="setup-help"><summary>Configuration Firebase</summary><ol><li>Dans Firebase, crée une application Web et renseigne sa configuration dans firebase-config.js.</li><li>Active Authentication avec e-mail et mot de passe, Firestore et Storage.</li><li>Publie les règles fournies dans firestore.rules et storage.rules depuis la console Firebase.</li><li>Crée ton utilisateur dans Authentication, puis dans Firestore crée le document admins/UID en remplaçant UID par son identifiant Authentication.</li><li>Connecte-toi ici et ajoute les produits. Les changements sont enregistrés dans Firebase.</li></ol></details>
+  <form id="login" class="workspace-form" hidden><h2>Connexion administrateur</h2><label>Adresse e-mail<input name="email" type="email" autocomplete="username" required></label><label>Mot de passe<input name="password" type="password" autocomplete="current-password" required></label><button class="button">Se connecter</button></form>
+  <div id="dashboard" hidden>
+    <nav class="workspace-nav" aria-label="Gestion"><a href="#site">Site</a><a href="#produits">Produits</a><a href="#communication">Communication</a><a href="#clients">Clients</a></nav>
+    <section id="site" class="workspace-section"><h2>Accueil</h2><form id="siteForm" class="workspace-form"><label>Accroche<input name="headline" maxlength="100" required></label><label>Texte de présentation<textarea name="intro" maxlength="300" required></textarea></label><button class="button">Enregistrer</button></form></section>
+    <section id="produits" class="workspace-section"><h2>Produits</h2><div class="workspace-columns">
+      <div><h3>Catalogue</h3><div id="productList" class="item-list"></div></div>
+      <form id="productForm" class="workspace-form"><h3 id="productTitle">Nouveau produit</h3><input name="id" type="hidden"><input name="image" type="hidden">
+        <label>Nom<input name="name" maxlength="60" required></label><label>Description<textarea name="desc" maxlength="300" required></textarea></label>
+        <label>Couleur<select name="color"><option>Noir</option><option>Bordeaux</option><option>Gris</option><option>Écru</option></select></label>
+        <label>Prix en euros<input name="price" type="number" min="1" max="10000" step="0.01" required></label>
+        <label>Photo JPEG, PNG ou WebP, 5 Mo maximum<input name="photo" type="file" accept="image/jpeg,image/png,image/webp"></label>
+        <div class="actions"><button class="button">Enregistrer</button><button type="button" class="button ghost" id="productReset">Nouveau</button></div>
+      </form>
+    </div></section>
+    <section id="communication" class="workspace-section"><h2>Communication</h2><div class="workspace-columns"><div><h3>Brouillons</h3><div id="draftList" class="item-list"></div></div><form id="draftForm" class="workspace-form"><h3>Nouveau brouillon</h3><label>Canal<select name="channel"><option>Instagram</option><option>TikTok</option><option>Newsletter</option></select></label><label>Texte<textarea name="text" maxlength="3000" required></textarea></label><button class="button">Enregistrer le brouillon</button></form></div></section>
+    <section id="clients" class="workspace-section"><h2>Clients</h2><p>Profils créés depuis la page compte. Les mots de passe restent dans Firebase Authentication.</p><div id="customerList" class="item-list"></div></section>
+  </div>
+</main></body></html>

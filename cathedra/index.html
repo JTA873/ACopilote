@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c0c0d">
+  <meta name="description" content="Révolte Noire — sweats à capuche inspirés par la dark romance et l'architecture gothique.">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <title>Révolte Noire — Dark romance à porter</title>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="#top">Révolte Noire</a>
+      <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+        <button class="nav-close" id="navClose" type="button" aria-label="Fermer le menu">&times;</button>
+        <ul class="nav-list">
+          <li><a href="#collection">Collection</a></li>
+          <li><a href="#qualite">Qualité</a></li>
+          <li><a href="#faq">Aide</a></li>
+          <li><a href="compte.html">Mon compte</a></li>
+        </ul>
+      </nav>
+      <button class="cart-toggle" id="cartOpen" type="button" aria-label="Ouvrir le panier">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8zm4 0V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu" aria-controls="mainNav" aria-expanded="false"><span class="menu-icon"></span></button>
+    </div>
+  </header>
+
+  <main id="contenu" tabindex="-1">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Collection 01 · Dark romance</span>
+          <h1>Révolte<br>Noire</h1>
+          <p class="hero-statement">L'amour en clair-obscur.</p>
+          <p class="lead">Des sweats imprimés inspirés des passions indociles, des pierres anciennes et des nuits sans fin.</p>
+          <div class="hero-actions">
+            <a class="button" href="#collection">Voir la collection</a>
+          </div>
+          <p class="hero-note">Livraison offerte dès 100&nbsp;€ · Retours sous 30 jours</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="collection">
+      <div class="section-head">
+        <div><span class="eyebrow">Édition 01 / 04 modèles</span><h2>La collection</h2></div>
+        <div class="tools">
+          <div class="chips" id="chips" role="group" aria-label="Filtrer par couleur">
+            <button class="chip" type="button" data-f="all" aria-pressed="true">Tous</button>
+            <button class="chip" type="button" data-f="Noir" aria-pressed="false">Noir</button>
+            <button class="chip" type="button" data-f="Bordeaux" aria-pressed="false">Bordeaux</button>
+            <button class="chip" type="button" data-f="Gris" aria-pressed="false">Gris</button>
+            <button class="chip" type="button" data-f="Écru" aria-pressed="false">Écru</button>
+          </div>
+          <label class="sort"><span class="sr-only">Trier</span>
+            <select id="sort"><option value="def">Sélection</option><option value="asc">Prix croissant</option><option value="desc">Prix décroissant</option></select>
+          </label>
+        </div>
+      </div>
+      <p class="photo-notice">Photos d'illustration : les visuels définitifs des modèles sont à venir.</p>
+      <div class="product-grid" id="grid"></div>
+    </section>
+
+    <section class="section container" id="qualite">
+      <div class="usp">
+        <div><span class="usp-number">01 / MOTIF</span><h3>Impression</h3><p>Des motifs graphiques inspirés de l'architecture gothique.</p></div>
+        <div><span class="usp-number">02 / MATIÈRE</span><h3>Molleton</h3><p>Une matière confortable pour accompagner les journées fraîches.</p></div>
+        <div><span class="usp-number">03 / SILHOUETTE</span><h3>Coupe classique</h3><p>Une silhouette droite, facile à porter au quotidien.</p></div>
+      </div>
+    </section>
+
+    <section class="section container section-narrow" id="faq">
+      <h2>Aide</h2>
+      <div class="faq">
+        <details><summary>Livraison</summary><p>Expédition sous 48&nbsp;h. Offerte dès 100&nbsp;€, sinon 6,90&nbsp;€.</p></details>
+        <details><summary>Retours</summary><p>Retour possible sous 30 jours si le vêtement n'a pas été porté ni lavé.</p></details>
+        <details><summary>Quelle taille choisir ?</summary><p>Prenez votre taille habituelle. Entre deux tailles, prenez la plus grande.</p></details>
+        <details><summary>Entretien</summary><p>Lavage à 30&nbsp;°C, à l'envers. Pas de sèche-linge, pas de repassage sur l'impression.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="brand">Révolte Noire</span>
+      <form class="news" id="newsForm" novalidate>
+        <label class="sr-only" for="newsEmail">Adresse e-mail</label>
+        <input id="newsEmail" type="email" required placeholder="Votre e-mail" autocomplete="email">
+        <button class="button" type="submit">Newsletter</button>
+      </form>
+    </div>
+    <div class="container footer-bottom"><span>&copy; 2026 Révolte Noire</span><span id="newsMsg" role="status"></span><span>Site de démonstration : aucun paiement réel.</span><a href="admin.html">Espace de gestion</a><span>Images : <a href="https://commons.wikimedia.org/wiki/File:Albi-cathedral-gothic-interior-perspective.jpg">Marc-Julien-Photography, CC0</a> · <a href="https://commons.wikimedia.org/wiki/File:Hoodie_m7agar.jpg">YoussefTahoun, CC0</a> · <a href="https://images.unsplash.com/photo-1556821840-3a63f95609a7">Unsplash</a> · <a href="https://commons.wikimedia.org/wiki/File:Fastcolors-DTF-men_fashion_sweatshirt-NAVY_BACK.jpg">FastColors, CC BY-SA 2.5</a> · <a href="https://commons.wikimedia.org/wiki/File:Fastcolors-men_fashion_sweatshirt-back-printed.jpg">FastColors, CC BY-SA 2.5</a></span></div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Panier" aria-hidden="true">
+    <div class="drawer-head"><h2>Panier</h2><button class="icon-btn" id="cartClose" type="button" aria-label="Fermer le panier">&times;</button></div>
+    <div class="ship"><p id="shipText"></p><div class="bar"><i id="shipBar"></i></div></div>
+    <ul class="cart-list" id="cartList"></ul>
+    <div class="drawer-foot">
+      <dl class="sums">
+        <div><dt>Sous-total</dt><dd id="sumSub">0 €</dd></div>
+        <div><dt>Livraison</dt><dd id="sumShip">0 €</dd></div>
+        <div class="grand"><dt>Total</dt><dd id="sumTotal">0 €</dd></div>
+      </dl>
+      <button class="button full" id="checkout" type="button">Commander</button>
+    </div>
+  </aside>
+
+  <dialog class="modal" id="productDialog" aria-labelledby="pdName">
+    <button class="icon-btn modal-close" type="button" data-close aria-label="Fermer">&times;</button>
+    <div class="dialog-grid" id="productBody"></div>
+  </dialog>
+
+  <dialog class="modal modal-narrow" id="checkoutDialog" aria-labelledby="coTitle">
+    <button class="icon-btn modal-close" type="button" data-close aria-label="Fermer">&times;</button>
+    <div class="checkout" id="checkoutBody"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
