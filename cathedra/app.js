@@ -2,10 +2,10 @@
 
 // Photos attendues dans assets/products/ : <id>-1.jpg, <id>-2.jpg ... et hero.jpg. Sans photo, un visuel de repli s'affiche.
 const PRODUCTS = [
-  { id: 'nef', name: 'Nef', color: 'Noir', hex: '#161618', ink: '#f4f1ea', price: 69, print: 'chest', badge: 'Best-seller', desc: 'Le classique noir, logo sérigraphié sur la poitrine.', imgs: 2, sp: 'Logo poitrine, 1 couleur' },
-  { id: 'vitrail', name: 'Vitrail', color: 'Bordeaux', hex: '#5a1424', ink: '#f4f1ea', price: 79, print: 'big', badge: 'Nouveau', desc: 'Bordeaux profond, grand texte sérigraphié sur le devant.', imgs: 2, sp: 'Grand texte devant, 1 couleur' },
-  { id: 'pierre', name: 'Pierre', color: 'Gris', hex: '#6b6c70', ink: '#141414', price: 69, print: 'arch', badge: '', desc: 'Gris chiné, petit motif d\'arche imprimé au centre.', imgs: 2, sp: 'Motif arche, 1 couleur' },
-  { id: 'clocher', name: 'Clocher', color: 'Écru', hex: '#d9d2c1', ink: '#141414', price: 79, print: 'chest', badge: '', desc: 'Écru clair, logo noir sur la poitrine.', imgs: 2, sp: 'Logo poitrine, 1 couleur' },
+  { id: 'nef', name: 'Sweat 01', color: 'Noir', hex: '#161618', ink: '#f4f1ea', price: 69, print: 'chest', badge: 'Best-seller', desc: 'Sweat noir à capuche avec impression sur la poitrine.', imgs: 2, sp: 'Impression poitrine, 1 couleur' },
+  { id: 'vitrail', name: 'Sweat 02', color: 'Bordeaux', hex: '#5a1424', ink: '#f4f1ea', price: 79, print: 'big', badge: 'Nouveau', desc: 'Sweat bordeaux à capuche avec impression sur le devant.', imgs: 2, sp: 'Impression devant, 1 couleur' },
+  { id: 'pierre', name: 'Sweat 03', color: 'Gris', hex: '#6b6c70', ink: '#141414', price: 69, print: 'arch', badge: '', desc: 'Sweat gris à capuche avec motif imprimé au centre.', imgs: 2, sp: 'Impression devant, 1 couleur' },
+  { id: 'clocher', name: 'Sweat 04', color: 'Écru', hex: '#d9d2c1', ink: '#141414', price: 79, print: 'chest', badge: '', desc: 'Sweat écru à capuche avec impression sur la poitrine.', imgs: 2, sp: 'Impression poitrine, 1 couleur' },
 ];
 const SIZES = { S: [56, 68, 62], M: [59, 70, 63], L: [62, 72, 64], XL: [65, 74, 65] };
 const FREE_FROM = 100, SHIPPING = 6.9;
@@ -19,8 +19,8 @@ const byId = (id) => PRODUCTS.find((p) => p.id === id);
 function hoodie(p) {
   let art = '';
   const f = p.ink;
-  if (p.print === 'chest') art = `<text x="190" y="190" text-anchor="middle" font-family="Georgia,serif" font-size="15" font-weight="700" letter-spacing="4" fill="${f}">CATHEDRA</text>`;
-  if (p.print === 'big') art = `<text x="190" y="205" text-anchor="middle" font-family="Georgia,serif" font-size="30" font-weight="700" letter-spacing="3" fill="${f}">CATHE</text><text x="190" y="238" text-anchor="middle" font-family="Georgia,serif" font-size="30" font-weight="700" letter-spacing="3" fill="${f}">DRA</text>`;
+  if (p.print === 'chest') art = `<text x="190" y="190" text-anchor="middle" font-family="Georgia,serif" font-size="15" font-weight="700" fill="${f}">MAISON 04</text>`;
+  if (p.print === 'big') art = `<text x="190" y="205" text-anchor="middle" font-family="Georgia,serif" font-size="26" font-weight="700" fill="${f}">MAISON</text><text x="190" y="238" text-anchor="middle" font-family="Georgia,serif" font-size="26" font-weight="700" fill="${f}">04</text>`;
   if (p.print === 'arch') art = `<path d="M172 235V195a18 18 0 0 1 36 0v40zM190 177v58M172 205h36" fill="none" stroke="${f}" stroke-width="2.5"/>`;
   return `<svg viewBox="0 0 380 400" role="img" aria-label="${p.name}">
     <path d="M140 40Q190 5 240 40L262 92Q190 122 118 92Z" fill="${p.hex}" stroke="#000" stroke-opacity=".25"/>

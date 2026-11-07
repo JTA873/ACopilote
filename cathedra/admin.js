@@ -37,8 +37,8 @@ function listen(path, callback) {
 function startDashboard() {
   subscriptions.push(onSnapshot(doc(db, 'site', 'settings'), (entry) => {
     const data = entry.data() || {};
-    find('#siteForm').elements.headline.value = data.headline || "L'amour en clair-obscur.";
-    find('#siteForm').elements.intro.value = data.intro || 'Des sweats imprimés inspirés des passions indociles, des pierres anciennes et des nuits sans fin.';
+    find('#siteForm').elements.headline.value = data.headline || 'Sweats à capuche imprimés.';
+    find('#siteForm').elements.intro.value = data.intro || 'Une sélection de sweats à capuche, aux coupes confortables et aux imprimés graphiques.';
   }, () => status('Impossible de charger les textes du site.')));
   listen('products', (snapshot) => {
     const list = find('#productList');
